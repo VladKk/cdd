@@ -1,4 +1,4 @@
-# FileSorter
+# cdd
 
 Improved version of cd Linux command with built-in ls and multithreading
 
