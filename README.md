@@ -17,7 +17,7 @@ cdd -p /home/user -n /home/user/new_directory -n /home -n /home/user/another_dir
 ```
 
 ### How to add alias
-1. Edit <pre>~/.bashrc (~/.zshrc)</pre> file using text redactor: ```nvim ~/.bashrc``` or ```source ~/.zshrc```
+1. Edit ```~/.bashrc``` (```~/.zshrc```) file using text redactor: ```nvim ~/.bashrc``` or ```source ~/.zshrc```
 2. Append your shell alias
 3. For example append: ```alias lsa='ls -a'```
 4. Save and close the file.
