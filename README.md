@@ -6,7 +6,7 @@ Improved version of cd Linux command with built-in ls and multithreading
 
 ## How To Use
 
-1. Add alias (See []())
+1. Add alias
 2. Use next options:
     * -p [path...] (necessarily) - path to directory you need to get
     * -n [path...] (optional)(can be added multiple times) - path to another directory you need to add to main
@@ -17,7 +17,7 @@ cdd -p /home/user -n /home/user/new_directory -n /home -n /home/user/another_dir
 ```
 
 ### How to add alias
-1. Edit ~/.bashrc (~/.zshrc) file using text redactor: ```nvim ~/.bashrc``` or ```source ~/.zshrc```
+1. Edit <pre>~/.bashrc (~/.zshrc)</pre> file using text redactor: ```nvim ~/.bashrc``` or ```source ~/.zshrc```
 2. Append your shell alias
 3. For example append: ```alias lsa='ls -a'```
 4. Save and close the file.
