@@ -12,14 +12,11 @@
 
 #include "vars.h"
 
-// TODO: create multithreaded cd for another directory by path
-// TODO: make it all recursive
-
 int change_dir(const char *path);
 
 int list_content(const char *path);
 
-int add_new_dir(const char *n_path);
+int create_new_thread(const char *path);
 
 static error_t parse_opt(int key, char *arg, struct argp_state *state) {
     switch (key) {
@@ -27,6 +24,7 @@ static error_t parse_opt(int key, char *arg, struct argp_state *state) {
             change_dir(arg);
             break;
         case 'n':
+            create_new_thread(arg);
             break;
         case ARGP_KEY_ARG:
             if (state->arg_num > 2) {

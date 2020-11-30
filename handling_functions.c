@@ -27,7 +27,7 @@ int list_content(const char *path) {
         return EXIT_FAILURE;
     }
 
-    printf("Content of %s:\n", path);
+    printf("\nContent of %s:\n", path);
 
     while ((de = readdir(dr)) != NULL) {
         switch (de->d_type) {
@@ -66,8 +66,21 @@ int list_content(const char *path) {
     return EXIT_SUCCESS;
 }
 
-int add_new_dir(const char *n_path) {
+int create_new_thread(const char *path) {
+    pthread_t new_thread;
+    int ptc = pthread_create(&new_thread, NULL, change_dir, path);
 
+    if (ptc == -1) {
+        perror("pthread_create error");
+        exit(errno);
+    }
+
+    int ptj = pthread_join(new_thread, NULL);
+
+    if (ptj == -1) {
+        perror("pthread_join error");
+        exit(errno);
+    }
 
     return EXIT_SUCCESS;
 }
