@@ -1,8 +1,6 @@
-# cdd
+# look
 
 Improved version of cd Linux command with built-in ls and multithreading
-
-**WORK IN PROGRESS**
 
 ## How To Use
 
@@ -10,13 +8,15 @@ Improved version of cd Linux command with built-in ls and multithreading
 2. Use next options:
     * -p [path...] (necessarily) - path to directory you need to get
     * -n [path...] (optional)(can be added multiple times) - path to another directory you need to add to main
-    
+
 **Example:**
+
 ```
-cdd -p /home/user -n /home/user/new_directory -n /home -n /home/user/another_directory
+look -p /home/user -n /home/user/new_directory -n /home -n /home/user/another_directory
 ```
 
 ### How to add alias
+
 1. Edit ```~/.bashrc``` (```~/.zshrc```) file using text redactor: ```nvim ~/.bashrc``` or ```source ~/.zshrc```
 2. Append your shell alias
 3. For example append: ```alias lsa='ls -a'```
@@ -29,14 +29,15 @@ cdd -p /home/user -n /home/user/new_directory -n /home -n /home/user/another_dir
 
 ## Contributing
 
-If you have suggestions, write: 
+If you have suggestions, write:
+
 * GMail: **vladislav.kolyadenko@gmail.com**
-* Telegram: **@vlad_is_real** 
+* Telegram: **@vlad_is_real**
 * Instagram: **@ncks_gwc**
 
 ## Versioning
 
-For the versions available, see the [cdd](https://github.com/VladKk/cdd). 
+For the versions available, see the [look](https://github.com/VladKk/look).
 
 ## Authors
 

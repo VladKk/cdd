@@ -1,5 +1,5 @@
-#ifndef CDD_HANDLING_FUNCTIONS_H
-#define CDD_HANDLING_FUNCTIONS_H
+#ifndef LOOK_HANDLING_FUNCTIONS_H
+#define LOOK_HANDLING_FUNCTIONS_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,6 +19,7 @@ int list_content(const char *path);
 int create_new_thread(const char *path);
 
 static error_t parse_opt(int key, char *arg, struct argp_state *state) {
+    // Call function depending on argument
     switch (key) {
         case 'p':
             change_dir(arg);
@@ -39,4 +40,4 @@ static error_t parse_opt(int key, char *arg, struct argp_state *state) {
     return EXIT_SUCCESS;
 }
 
-#endif //CDD_HANDLING_FUNCTIONS_H
+#endif //LOOK_HANDLING_FUNCTIONS_H

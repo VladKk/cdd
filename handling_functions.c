@@ -1,6 +1,7 @@
 #include "handling_functions.h"
 
 int change_dir(const char *path) {
+    // cd with error handling
     int cd = chdir(path);
 
     if (cd == -1) {
@@ -8,6 +9,7 @@ int change_dir(const char *path) {
         exit(errno);
     }
 
+    // ls with error handling
     int ls = list_content(path);
 
     if (ls == -1) {
@@ -19,6 +21,7 @@ int change_dir(const char *path) {
 }
 
 int list_content(const char *path) {
+    // Open directory by path
     struct dirent *de;
     DIR *dr = opendir(path);
 
@@ -29,6 +32,7 @@ int list_content(const char *path) {
 
     printf("\nContent of %s:\n", path);
 
+    // Print directory content with its type
     while ((de = readdir(dr)) != NULL) {
         switch (de->d_type) {
             case DT_UNKNOWN:
@@ -67,6 +71,7 @@ int list_content(const char *path) {
 }
 
 int create_new_thread(const char *path) {
+    // Create new thread with cd command and handle errors
     pthread_t new_thread;
     int ptc = pthread_create(&new_thread, NULL, change_dir, path);
 
@@ -75,6 +80,7 @@ int create_new_thread(const char *path) {
         exit(errno);
     }
 
+    // Join new thread
     int ptj = pthread_join(new_thread, NULL);
 
     if (ptj == -1) {

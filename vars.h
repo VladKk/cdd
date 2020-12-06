@@ -1,16 +1,20 @@
-#ifndef CDD_VARS_H
-#define CDD_VARS_H
+#ifndef LOOK_VARS_H
+#define LOOK_VARS_H
 
-static char doc[] = "This utility adds multithreading to default cd linux command. You can use cd as much times "
-                    "as you need and operate with a lot of directories at the same time";
+// Program description
+static char doc[] = "This utility adds multithreading and 'build-in' ls command to default cd linux command. "
+                    "You can use look as much times as you need to check directories content";
+// Usage description
 static char args_doc[] = "[-p] [path_to_directory...] [[-n] [path_to_another_directory...]]";
 
+// Options description
 static struct argp_option options[] = {
         {"path",     'p', "PATH",         0, "PATH to directory"},
         {"new_path", 'n', "ANOTHER_PATH", 0, "ANOTHER_PATH to another directory (optional)"},
         {0}
 };
 
+// Argument parser prototype
 static struct argp argp;
 
-#endif //CDD_VARS_H
+#endif //LOOK_VARS_H
